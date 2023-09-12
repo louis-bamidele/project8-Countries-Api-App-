@@ -1,5 +1,6 @@
 import React from "react";
 import { FaMoon, FaRegMoon } from "react-icons/fa";
+import { BsSunFill } from "react-icons/bs";
 
 const Nav = (props) => {
   return (
@@ -9,7 +10,7 @@ const Nav = (props) => {
         onClick={() => props.setDarkMode(!props.darkMode)}
         className='flex cursor-pointer'>
         <div className='flex gap-2 items-center'>
-          {props.darkMode ? <FaRegMoon /> : <FaMoon />}
+          {props.darkMode ? <BsSunFill /> : <FaMoon />}
           <h5>{props.darkMode ? "light" : "dark"} mode</h5>
         </div>
       </div>
