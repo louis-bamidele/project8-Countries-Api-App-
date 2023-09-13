@@ -1,6 +1,4 @@
-"use client";
 import "./globals.css";
-import { useState } from "react";
 import { Inter } from "next/font/google";
 import Nav from "../components/Nav";
 const inter = Inter({ subsets: ["latin"] });
@@ -11,13 +9,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <html className={darkMode ? "dark" : ""} lang='en'>
+    <html lang='en'>
       <body className={inter.className}>
         <main className='bg-white text-black dark:bg-blue-dark dark:text-white '>
-          <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Nav />
           {children}
         </main>
       </body>
